@@ -1,0 +1,33 @@
+@import "bootstrap";
+
+/* universal */
+html{
+	overflow: auto;
+	min-width:830px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+body{
+	background-image: url(/images/starry.jpg);
+}
+
+/* header */
+.header_title{
+	margin-left:25px;
+}
+
+.navbar{
+    display: inline-block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-inner{
+	margin:0px;
+    padding:0px;
+}
+
+div.navbar div.navbar-inner ul.nav a:hover {
+    background-color: #080808 !important; 
+}

@@ -5,8 +5,26 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">    	
+ 	  <a class="brand" href="#">
+ 	  	<div class="header_title">Undergraduate Astronomical Society at UCLA</div>
+ 	  </a>
+	  <ul class="nav">
+		<li class="divider-vertical"></li>
+		<li><a href="#">About UAS</a></li>
+		<li class="divider-vertical"></li>
+		<li><a href="#">Officers</a></li>
+		<li class="divider-vertical"></li>
+		<li><a href="#">Picture Albums</a></li>
+	  </ul>
+    </div>
+  </div>
 
 <%= yield %>
 
