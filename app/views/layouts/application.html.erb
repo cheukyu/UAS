@@ -12,21 +12,26 @@
 <body>
   <div class="navbar navbar-inverse">
     <div class="navbar-inner">    	
- 	  <a class="brand" href="#">
- 	  	<div class="header_title">Undergraduate Astronomical Society at UCLA</div>
+ 	  <a class="brand" href="/">
+ 	  	<div class="header_title">
+        Undergraduate Astronomical Society at UCLA
+        </div>
  	  </a>
 	  <ul class="nav">
 		<li class="divider-vertical"></li>
-		<li><a href="#">About UAS</a></li>
+		<li><%= link_to "About UAS", uas_path %></li>
 		<li class="divider-vertical"></li>
-		<li><a href="#">Officers</a></li>
+		<li><%= link_to "Officers", officers_path %></li>
 		<li class="divider-vertical"></li>
-		<li><a href="#">Picture Albums</a></li>
+		<li><%= link_to "Picture Albums", pictures_path %></li>
 	  </ul>
     </div>
   </div>
 
 <%= yield %>
+<br />
+<br />
+<%= render 'layouts/footer' %>
 
 </body>
 </html>

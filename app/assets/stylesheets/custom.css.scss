@@ -31,3 +31,43 @@ body{
 div.navbar div.navbar-inner ul.nav a:hover {
     background-color: #080808 !important; 
 }
+
+.footer{
+  margin-top: 45px;
+  padding-top: 5px;
+  color: #999;
+  text-align: center; 
+
+}
+
+.footer ul{
+	list-style: none;
+	display: inline-block;
+}
+
+.footer ul li{
+	margin-left: 10px;
+	float: left;
+}
+
+/* home page */
+
+.slideshow{
+	/* for 9:16 ratio */
+	width:830px;
+	height: 467px;
+	background-color: white;
+	margin-left: auto;
+  	margin-right: auto;
+  	margin-top: -23px;
+}
+
+.announcements-container{
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	margin-left: auto ;
+  	margin-right: auto ;
+	width: 830px;
+	min-height: 500px;
+	background-color: rgba(255, 255, 255, 0.7);
+}

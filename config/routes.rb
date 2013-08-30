@@ -1,14 +1,13 @@
 UAS::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/uas"
-  get "static_pages/officers"
-  get "static_pages/pictures"
-  get "welcome/index"
+  root 'static_pages#home'
+  match '/uas', to: 'static_pages#uas', via: 'get'
+  match '/officers', to: 'static_pages#officers', via: 'get'
+  match '/pictures', to: 'static_pages#pictures', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  #root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
