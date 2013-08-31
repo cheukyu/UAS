@@ -50,6 +50,20 @@ div.navbar div.navbar-inner ul.nav a:hover {
 	float: left;
 }
 
+.container{
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	margin-left: auto ;
+  	margin-right: auto ;
+	width: 830px;
+	min-height: 500px;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.email{
+	font-color: blue;
+}
+
 /* home page */
 
 .slideshow{
@@ -62,12 +76,66 @@ div.navbar div.navbar-inner ul.nav a:hover {
   	margin-top: -23px;
 }
 
-.announcements-container{
-	-moz-border-radius: 30px;
-	border-radius: 30px;
+/* officers page */
+
+div.officer-box{
+	width: 800px;
+	height: 200px;
+	background-color: yellow;
 	margin-left: auto ;
   	margin-right: auto ;
-	width: 830px;
-	min-height: 500px;
-	background-color: rgba(255, 255, 255, 0.7);
+}
+
+td.left-spacing{
+	width: 40px;	
+}
+
+td.officer-image{
+	width: 150px;
+	height: 200px;
+	background-color: white;
+	
+}
+
+td.officer-description{
+	width: 570px;
+	height: 200px;
+	background-color: pink;
+}
+
+ul.description-list{
+	list-style: none;
+	text-align: left;
+}
+
+li.list-items{
+	font-size: 1.3em;
+	margin-bottom: 5px;
+}
+
+/* about uas page */
+
+.text{
+	text-align: left;
+	margin-left: 30px;
+	width:770px;
+}
+
+table.udmargin{
+	margin-left: 60px;
+}
+
+td.updates{
+	width: 300px;
+}
+
+.links{
+	text-align: left;
+	margin-left: 260px;
+	width:540px;
+}
+
+li.lkgaps{
+	font-size: 1.2em;
+	margin-bottom: 5px;
 }
