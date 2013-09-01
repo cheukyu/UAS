@@ -1,0 +1,12 @@
+<% provide(:title, 'Admin Page') %>
+
+<% if signed_in? %>
+  <div class="container">
+    <%= link_to "Sign out", signout_path, method: "delete" %>
+    <br />
+  
+  </div>
+
+<% else %>
+<script type="text/javascript"> window.location.href= '<%= signin_path %>' </script>
+<% end %>

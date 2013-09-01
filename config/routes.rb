@@ -1,8 +1,13 @@
 UAS::Application.routes.draw do
+  #get "users/new"
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   root 'static_pages#home'
   match '/uas', to: 'static_pages#uas', via: 'get'
   match '/officers', to: 'static_pages#officers', via: 'get'
   match '/pictures', to: 'static_pages#pictures', via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete' 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
