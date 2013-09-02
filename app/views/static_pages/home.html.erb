@@ -6,9 +6,18 @@
 
 <br />
 <br />
-<br />
-<br />
 
 <div class="container">
-	<a> Announcement Board coming soon! </a>
+	<br />
+	<h2> Announcement Board </h2>
+	<% @user = User.find_by_id(1) %>
+    <% if @user.announcements.any? %>
+    	<ol class="no-list">
+        	<%= render @user.announcements %>
+      	</ol>
+		<%# <%= will_paginate @announcements, :param_name => 'a_page' %>
+	<% else %>
+		<br />
+		<h4> Currently there are no announcements. Check out our facebook group for more information! </h4>
+    <% end %>
 </div>

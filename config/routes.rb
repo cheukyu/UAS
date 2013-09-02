@@ -2,6 +2,7 @@ UAS::Application.routes.draw do
   #get "users/new"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :announcements, only: [:create, :destroy]
   root 'static_pages#home'
   match '/uas', to: 'static_pages#uas', via: 'get'
   match '/officers', to: 'static_pages#officers', via: 'get'

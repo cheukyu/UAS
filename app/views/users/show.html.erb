@@ -2,9 +2,31 @@
 
 <% if signed_in? %>
   <div class="container">
+  	<br />
+  	<div class="signout">
     <%= link_to "Sign out", signout_path, method: "delete" %>
-    <br />
-  
+	</div>
+  	<table>
+  		<tr>
+  			<td class="admin-cell">
+  				<%= render 'shared/announcement_form' %>
+  			</td>
+  			<td class="admin-cell">
+  				<div class="announcement-instruction">
+  				<% if @announcements.any? %>
+      			<h3>Delete old announcements</h3>
+      			<h4> Number of old announcements: <%= @announcements.count %> </h4>
+      			<ol>
+        		<%= render @announcements %>
+      			</ol>
+      			<%#= will_paginate @announcements %>
+      			<% else %>
+      			<h3> We currently have no announcements! </h3>
+    			<% end %>
+    		</div>
+  			</td>
+  		</tr>
+  	</table>
   </div>
 
 <% else %>

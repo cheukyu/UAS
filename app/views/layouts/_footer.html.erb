@@ -5,7 +5,13 @@
 			<li> &nbsp; &nbsp;| &nbsp; &nbsp;</li>
 			<li> Meeting time: Wednesday 7:30PM in Knudsen 2-222.</li>
 			<li> &nbsp; &nbsp;| &nbsp; &nbsp;</li>
-			<li> <%= link_to "Admin Sign In", signin_path, class: 'link-color' %> </li>
+			<li> 
+				<% if signed_in? %>
+					<%= link_to "Admin Page", 'users/1', class: 'link-color' %>
+				<% else %>
+					<%= link_to "Admin Sign In", signin_path, class: 'link-color' %> 
+				<% end %>
+			</li>
 
 		</ul>
 	</nav>

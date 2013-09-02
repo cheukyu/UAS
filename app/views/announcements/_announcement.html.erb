@@ -1,0 +1,19 @@
+<% if signed_in? %>
+	<li>
+		<div>Title: <span class="admin-an"> <%= announcement.title %> </span> </div>
+  		<div>Content: <span class="admin-an"><%= announcement.content.slice(0,80) %>...</span> </div>
+  		<div> <span class="delete-link"><%= link_to "Delete the above announcement", announcement, method: :delete, data: { confirm: "You sure? Once it has been deleted, you cannot restore it." }, title: announcement.content %> </span></div>
+	</li>
+	<br />
+	<br />
+<% else %>
+	<li>
+		<br />
+		<div class="showing-announcement">
+		<div class="announcement-showing-title"><%= announcement.title %> </div>
+  		<div class="announcement-showing-content"><%= announcement.content %></div>
+  		<div class="announcement-showing-time"> Posted <%= time_ago_in_words(announcement.created_at) %> ago</div>
+		</div>
+		<br />
+	</li>
+<% end %>
