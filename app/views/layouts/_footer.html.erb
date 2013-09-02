@@ -3,7 +3,13 @@
 		<ul>
 			<li>@UAS 2013-14.</li>
 			<li> &nbsp; &nbsp;| &nbsp; &nbsp;</li>
-			<li> Meeting time: Wednesday 7:30PM in Knudsen 2-222.</li>
+			<li> Meeting time: Wednesday 
+				<% if daylightsaving? %>
+					7:30PM 
+				<% else %>
+					6:30PM
+				<% end %>
+				in Knudsen 2-222.</li>
 			<li> &nbsp; &nbsp;| &nbsp; &nbsp;</li>
 			<li> 
 				<% if signed_in? %>

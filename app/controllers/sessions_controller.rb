@@ -18,4 +18,14 @@ class SessionsController < ApplicationController
 		sign_out
 		redirect_to root_url
 	end
+
+	def set_daylightsaving
+      current_user.update_attribute(:daylight, true)
+      redirect_to :back
+  	end
+
+  	def set_not_daylightsaving
+      current_user.update_attribute(:daylight, false)
+      redirect_to :back     
+  	end
 end

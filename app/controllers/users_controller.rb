@@ -7,4 +7,5 @@ class UsersController < ApplicationController
   	@announcement = current_user.announcements.build if signed_in?
   	@announcements = @user.announcements.paginate(:page => params[:a_page], :per_page => 10)
   end
+
 end

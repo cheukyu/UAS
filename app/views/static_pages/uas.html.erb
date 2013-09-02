@@ -8,7 +8,13 @@
 	<br />
 
 	<h2> Meeting time </h2>
-	<div class="text"> We currently meet in Knudsen 2-222 every Wednesday at 7:30PM (during Daylight Savings Time). Free food will be provided for the meeting. </div>
+	<div class="text"> We currently meet in Knudsen 2-222 every Wednesday at 
+    <% if daylightsaving? %>
+		7:30PM (during Daylight Savings Time). 
+	<% else %>
+		6:30PM (during Standard Time).
+	<% end %>
+	Free food will be provided for the meeting. </div>
 
 	<br />
 

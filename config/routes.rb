@@ -1,7 +1,7 @@
 UAS::Application.routes.draw do
   #get "users/new"
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions #, only: [:new, :create, :destroy, :set_daylightsaving, :sat_not_daylightsaving]
   resources :announcements, only: [:create, :destroy]
   root 'static_pages#home'
   match '/uas', to: 'static_pages#uas', via: 'get'
@@ -9,6 +9,8 @@ UAS::Application.routes.draw do
   match '/pictures', to: 'static_pages#pictures', via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete' 
+  match '/sessions/set_daylightsaving' => 'sessions#set_daylightsaving', :via => [:post]
+  match '/sessions/set_not_daylightsaving' => 'sessions#set_not_daylightsaving', :via => [:post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

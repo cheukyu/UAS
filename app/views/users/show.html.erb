@@ -6,28 +6,60 @@
   	<div class="signout">
     <%= link_to "Sign out", signout_path, method: "delete" %>
 	</div>
-  	<table>
-  		<tr>
-  			<td class="admin-cell">
-  				<%= render 'shared/announcement_form' %>
-  			</td>
-  			<td class="admin-cell">
-  				<div class="announcement-instruction">
+
+  <table>
+    <div class="header"> Announcement Panel</div>
+    <br />
+  	<tr>
+  		<td class="admin-cell">
+  			<%= render 'shared/announcement_form' %>
+  		</td>
+  		<td class="admin-cell">
+  			<div class="announcement-instruction">
   				<% if @announcements.any? %>
       			<h3>Delete old announcements</h3>
       			<h4> Number of old announcements: <%= @announcements.count %> </h4>
       			<ol>
-        		<%= render @announcements %>
+        	  	<%= render @announcements %>
       			</ol>
       			<%#= will_paginate @announcements %>
-      			<% else %>
+      		<% else %>
       			<h3> We currently have no announcements! </h3>
     			<% end %>
     		</div>
-  			</td>
-  		</tr>
-  	</table>
+  		</td>
+  	</tr>
+  </table>
+
+  <br />
+
+  <table>    
+    <div class="header"> Meeting Time Panel</div>
+    <br />
+    <tr>
+      <td class="admin-cell">
+        <div class="meeting-time-button">
+          <%= button_to "Set to Daylight Savings Meeting Time (7:30PM)", {:controller => 'sessions', :action => "set_daylightsaving", :method => :put}, {:class => "btn btn-warning"} %>
+        </div>
+      </td>
+      <td class="admin-cell">
+        <div class="meeting-time-button">
+          <%= button_to "Set to Standard Meeting Time (6:30PM)", {:controller => 'sessions', :action => "set_not_daylightsaving", :method => :put},  {:class => "btn btn-warning"}%>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <div class="meeting-time-showing">
+    <% if daylightsaving? %>
+      You have set the meeting time to be Daylight Savings Time!
+    <% else %>
+      You have set the meeting time to be Standard Time!
+    <% end %>
   </div>
+    <br />
+    <br />
+    </div>
 
 <% else %>
 <script type="text/javascript"> window.location.href= '<%= signin_path %>' </script>
