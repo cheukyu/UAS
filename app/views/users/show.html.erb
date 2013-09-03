@@ -42,7 +42,7 @@
         <%= form_for @album, :html => {:multipart => true} do |f| %>
         <div class="announcement-creation">
           <div class="announcement-instruction"> <h3> Create a new picture album </h3> </div>
-          <div class="announcement-instruction"> Title (Date in YY-MM-DD format):</div>
+          <div class="announcement-instruction"> Title (Date in YYYY-MM-DD format):</div>
           <div class="announcement-instruction">(cannot be empty)</div>
           <div class="announcement-form input-xxlarge"> <%= f.text_field :name, placeholder: "Compose title (date)..." %> </div>
           <br />
