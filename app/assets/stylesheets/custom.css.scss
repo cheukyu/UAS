@@ -76,16 +76,22 @@ div.navbar div.navbar-inner ul.nav a:hover {
 	display: none;
 }
 
+
 /* home page */
 
 .slideshow{
-	/* for 9:16 ratio */
+	/* for 9:16 ratio 
 	width:830px;
 	height: 467px;
 	background-color: white;
 	margin-left: auto;
-  	margin-right: auto;
+  	margin-right: auto; */
   	margin-top: -23px;
+}
+
+.cover_image{
+	width: 800px;
+	height: 400px;
 }
 
 .no-list{
