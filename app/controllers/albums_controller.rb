@@ -5,7 +5,8 @@ class AlbumsController < ApplicationController
 			flash[:success] = "Album created!"
 			redirect_to :back
 		else
-			flash[:error] = "Failed to create album!"
+			flash[:error] = "Failed to create album!  
+			Make sure you have included a title and selected a image file!"
 			redirect_to :back
 		end
 	end
@@ -18,7 +19,7 @@ class AlbumsController < ApplicationController
 	def destroy
 
 		Album.find(params[:id]).destroy
-		flash[:success] = "Album destroyed."
+		flash[:success] = "Album deleted!"
 		redirect_to :back
 	end
 

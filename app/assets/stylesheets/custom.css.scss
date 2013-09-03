@@ -125,7 +125,7 @@ div.navbar div.navbar-inner ul.nav a:hover {
 div.officer-box{
 	width: 800px;
 	height: 200px;
-	background-color: yellow;
+	/* background-color: yellow; */
 	margin-left: auto ;
   	margin-right: auto ;
 }
@@ -137,14 +137,23 @@ td.left-spacing{
 td.officer-image{
 	width: 150px;
 	height: 200px;
-	background-color: white;
+	/* background-color: white; */
 	
+}
+
+.officer-image-resize{
+	width: 150px;
+	height: 200px;
 }
 
 td.officer-description{
 	width: 570px;
 	height: 200px;
-	background-color: pink;
+	/* background-color: pink; */
+}
+
+.unknown-color{
+	color: red;
 }
 
 ul.description-list{
