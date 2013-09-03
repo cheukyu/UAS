@@ -1,0 +1,19 @@
+<% if signed_in? %>
+	<li>
+		<div class="announcement-showing-title"><%= album.name %> </div>
+
+		<div><%= image_tag (album.cover_image.url), :width => 60, :height => 40 %> </div>
+
+		<%= link_to "delete", album, method: :delete, data: { confirm: "You sure?" } %>
+	</li>
+
+<% else %>
+
+	<li>
+		<div class="announcement-showing-title"><%= album.name %> </div>
+
+		<div><%= image_tag (album.cover_image.url), :width => 600, :height => 400 %> </div>
+		<br />
+		<br />
+	</li>
+<% end %>

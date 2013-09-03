@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130902033621) do
+ActiveRecord::Schema.define(version: 20130903020809) do
+
+  create_table "albums", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "cover_image_uid"
+    t.string   "cover_image_name"
+  end
+
+  add_index "albums", ["created_at"], name: "index_albums_on_created_at"
 
   create_table "announcements", force: true do |t|
     t.string   "title"

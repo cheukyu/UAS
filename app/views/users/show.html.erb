@@ -24,13 +24,52 @@
       			</ol>
       			<%#= will_paginate @announcements %>
       		<% else %>
-      			<h3> We currently have no announcements! </h3>
+      			<h3> We currently have no announcements to delete! </h3>
     			<% end %>
     		</div>
   		</td>
   	</tr>
   </table>
 
+  <br />
+  <br />
+
+  <table>
+    <div class="header"> Pictures Album Panel</div>
+    <br />
+    <tr>
+      <td class="admin-cell">
+        <%= form_for @album, :html => {:multipart => true} do |f| %>
+        <div class="announcement-creation">
+          <div class="announcement-instruction"> <h3> Create a new picture album </h3> </div>
+          <div class="announcement-instruction"> Title (Date in YY-MM-DD format):</div>
+          <div class="announcement-instruction">(cannot be empty)</div>
+          <div class="announcement-form input-xxlarge"> <%= f.text_field :name, placeholder: "Compose title (date)..." %> </div>
+          <br />
+          <div class="announcement-instruction"> Upload a picture:</div>
+          <div class="announcement-form"> <%= f.file_field :cover_image %> </div>
+          <br />
+          <%= f.submit "Post", class: "announcement-instruction btn btn-large btn-primary" %>
+        </div>
+        <% end %>
+      </td>
+      <td class="admin-cell">
+        <div class="announcement-instruction">
+
+          <% if @albums.blank? %>
+            <h3> We currently have no picture albums to delete! </h3>
+          <% else %>
+          <ol>
+              <%= render @albums %>
+            <% end %>
+          </ol>
+
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <br />
   <br />
 
   <table>    
@@ -52,14 +91,16 @@
 
   <div class="meeting-time-showing">
     <% if daylightsaving? %>
-      You have set the meeting time to be Daylight Savings Time!
+      You have set the meeting time to be <u> Daylight Savings Time! </u>
     <% else %>
-      You have set the meeting time to be Standard Time!
+      You have set the meeting time to be <u> Standard Time! </u>
     <% end %>
   </div>
-    <br />
-    <br />
-    </div>
+
+  <br />
+  <br />
+
+</div>
 
 <% else %>
 <script type="text/javascript"> window.location.href= '<%= signin_path %>' </script>

@@ -1,3 +1,15 @@
 <% provide(:title, 'Pictures') %>
-<h1>StaticPages#pictures</h1>
-<p>Find me in app/views/static_pages/pictures.html.erb</p>
+
+<div class="container">
+	<br />
+	<h2> Our Activities </h2>
+	<br />
+
+	<% if @albums.blank? %>
+		<h4> There are currently no pictures! </h4>
+	<% else %>
+		<ol class="no-list">
+			<div class="albums-container"><%= render @albums %> </div>
+		</ol>
+	<% end %>
+</div>

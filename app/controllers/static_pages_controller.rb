@@ -9,5 +9,6 @@ class StaticPagesController < ApplicationController
   end
 
   def pictures
+  	@albums = Album.all
   end
 end

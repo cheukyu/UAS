@@ -3,6 +3,7 @@ UAS::Application.routes.draw do
   resources :users
   resources :sessions #, only: [:new, :create, :destroy, :set_daylightsaving, :sat_not_daylightsaving]
   resources :announcements, only: [:create, :destroy]
+  resources :albums
   root 'static_pages#home'
   match '/uas', to: 'static_pages#uas', via: 'get'
   match '/officers', to: 'static_pages#officers', via: 'get'
