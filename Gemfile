@@ -68,6 +68,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'pg', '0.15.1'
+#gem 'pg', '0.15.1'
 gem 'execjs'
 gem 'therubyracer'
