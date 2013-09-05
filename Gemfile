@@ -16,6 +16,7 @@ gem 'dragonfly', '~>0.9.15'
 group :development, :test do
 	gem 'sqlite3', '1.3.7'
 	gem 'rspec-rails', '2.13.1'
+	gem 'taps', :require => false
 end
 
 group :test do
