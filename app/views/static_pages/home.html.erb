@@ -10,12 +10,12 @@
 <div class="container">
 	<br />
 	<h2> Announcement Board </h2>
-	<% @user = User.find_by_id(1) %>
+	<!-- <% @user = User.find_by_id(1) %> -->
     <% if @user.announcements.any? %>
     	<ol class="no-list">
-        	<%= render @user.announcements %>
+        	<%= render @announcements %>
       	</ol>
-		<%# <%= will_paginate @announcements, :param_name => 'a_page' %>
+		<%= will_paginate @announcements %>
 	<% else %>
 		<br />
 		<h4> Currently there are no announcements. Check out our facebook group for more information! </h4>
