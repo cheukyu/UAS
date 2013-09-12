@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130910031029) do
+ActiveRecord::Schema.define(version: 20130912232051) do
 
   create_table "albums", force: true do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20130910031029) do
     t.datetime "updated_at"
     t.string   "cover_image_uid"
     t.string   "cover_image_name"
+    t.string   "Url"
   end
 
   add_index "albums", ["created_at"], name: "index_albums_on_created_at"
@@ -39,7 +40,7 @@ ActiveRecord::Schema.define(version: 20130910031029) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.string   "remember_token"
-    t.boolean  "daylight"
+    t.boolean  "daylight",        default: true
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"

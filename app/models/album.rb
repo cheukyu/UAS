@@ -3,5 +3,5 @@ class Album < ActiveRecord::Base
                                           # this defines a reader/writer for cover_image
     default_scope -> { order('created_at DESC') }
     validates :name,  presence: true
-    validates :cover_image, presence: true
+    validates :Url, presence: true
 end

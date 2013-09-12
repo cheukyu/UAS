@@ -2,7 +2,7 @@
 	<li>
 		<div class="announcement-showing-title"><%= album.name %> </div>
 
-		<div><%= image_tag (album.cover_image.url), :width => 60, :height => 40 %> </div>
+		<div><%= image_tag (album.Url), :width => 60, :height => 40 %> </div>
 
 		<%= link_to "delete", album, method: :delete, data: { confirm: "You sure? Once it has been deleted, you cannot restore it." } %>
 	</li>
@@ -12,7 +12,7 @@
 	<li>
 		<div class="announcement-showing-title"><%= album.name %> </div>
 
-		<div><%= image_tag (album.cover_image.url), :width => 600, :height => 400, :class => "iefix" %> </div>
+		<div><%= image_tag (album.Url), :width => 600, :height => 400, :class => "iefix" %> </div>
 		<br />
 		<br />
 	</li>
