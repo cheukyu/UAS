@@ -10,8 +10,8 @@
   <div class="header"> Important Messages </div>
   <br />
   <div class="message-instruction"> 1. When you are on this page, clicking the "Admin Page" link on the bottom right hand corner will cause an error. Just press F5 instead.</div>
-  <div class="message-instruction"> 2. Please try to minimize the size of the photo before uploading it to the website. Only 300MB (Slug size) is available to the server. </div>
-  <div class="message-instruction">3. Please sign out when you are done. Also, if you are using a public computer, please delete the cookies as well. </div>
+  <div class="message-instruction"> 2. For uploading images, you can first upload the images to Facebook, and then copy and paste the image url to upload to the website. </div>
+  <div class="message-instruction"> 3. Please sign out when you are done. Also, if you are using a public computer, please delete the cookies as well. </div>
 
   <br />
   <br />
@@ -55,8 +55,8 @@
           <div class="announcement-instruction">(cannot be empty)</div>
           <div class="announcement-form input-xxlarge"> <%= f.text_field :name, placeholder: "Compose title (date)..." %> </div>
           <br />
-          <div class="announcement-instruction"> Upload a picture:</div>
-          <div class="announcement-form"> <%= f.text_field :cover_image_url %><%#= f.file_field :cover_image %> </div>
+          <div class="announcement-instruction"> Upload a picture from url:</div>
+          <div class="announcement-form"> <%= f.text_field :cover_image_url, placeholder: "Url in http or https..." %><%#= f.file_field :cover_image %> </div>
           <br />
           <%= f.submit "Post", class: "announcement-instruction btn btn-large btn-primary" %>
         </div>
