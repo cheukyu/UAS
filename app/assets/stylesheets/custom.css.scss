@@ -2,6 +2,14 @@
 
 /* universal */
 
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 830px;
+ 	background-color: white;
+ }
+
+
 html{
 	overflow: auto;
 	min-width:830px;
@@ -30,7 +38,7 @@ body{
 }
 
 div.navbar div.navbar-inner ul.nav a:hover {
-    background-color: #080808 !important; 
+     background-color: #080808 !important;
 }
 
 .footer{
